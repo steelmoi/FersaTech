@@ -1,0 +1,108 @@
+  <div>
+    <div class="row">
+      <div class="col-6">
+        <label class="btn btn-default p-0">
+          <input type="file" (change)="selectFile($event)" />
+        </label>
+      </div>
+
+      <div class="col-2">
+        <button class="btn btn-success btn-sm" [disabled]="!currentFile" (click)="upload()">
+          Cargar Archivo
+        </button>
+      </div>
+      <div class="col-2">
+        <button class="btn btn-secondary btn-sm" (click)="Back()">
+          Regresar
+        </button>
+      </div>
+    </div>
+
+  <div class="d-flex justify-content-center" *ngIf="IsBusy">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Cargando...</span>
+    </div>
+  </div>
+
+  <div class="row mb2" *ngIf="Success">
+    <div class="col-12">
+      <label>Resumen</label>
+      <div class="row">
+        <div class="col-2">
+          <label>Total con éxito</label>
+        </div>
+        <div class="col-2">
+          <span>{{Summary.result.totalProcesados}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <label>Total de Alertas</label>
+        </div>
+        <div class="col-2">
+          <span>{{Summary.result.totalAlertas}}</span>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <label>Total de Incidencias</label>
+        </div>
+        <div class="col-2">
+          <span>{{Summary.result.totalIncidencias}}</span>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <span class="text-danger">{{Summary.message}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div class="row" *ngIf="Success">
+    <div class="col-12">
+      <table class="table table-responsive table-striped">
+        <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Valor</th>
+            <th>Fecha</th>
+            <th>Linea</th>
+            <th>Correcto</th>
+            <th>Alerta</th>
+            <th>Incidencia</th>
+            <th>Error</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let record of Summary.data">
+            <td>{{record.type}}</td>
+            <td>{{record.amount}}</td>
+            <td>{{record.date}}</td>
+            <td>{{record.numLinea}}</td>
+            <td>
+              <label [ngClass]="{'record.isCorrect': 'text-success', '!record.isCorrect': 'text-danger'}">
+                {{ !record.isAlert && !record.esIncidencia ? 'SI' : 'NO'}}
+              </label>
+            </td>
+            <td>
+              <label [ngClass]="{'record.isAlert': 'text-warning', '!record.isCorrect': 'text-dark'}">
+                {{ record.isAlert ? 'SI' : 'NO'}}
+              </label>
+            </td>
+            <td>
+              <label [ngClass]="{'record.esIncidencia': 'text-danger', '!record.isCorrect': 'text-dark'}">
+                {{ record.esIncidencia ? 'SI' : 'NO'}}
+              </label>
+            </td>
+            <td>
+              <label *ngIf="!record.isCorrect">{{record.message}}</label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

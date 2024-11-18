@@ -1,0 +1,33 @@
+<h1 id="tableLabel">Carga de Archivos</h1>
+
+<p *ngIf="!Transactions"><em>Descargando información, espere ...</em></p>
+
+<div class="row">
+  <div class="col">
+    <button type="button" class="btn btn-success btn-floating" routerLinkActive="active" [routerLink]="['/load-file']">
+      <i class="bi-table">&nbsp;Cargar Archivo</i>
+    </button>
+  </div>
+</div>
+<table class="table table-responsive table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Archivo</th>
+      <th>Fecha Carga</th>
+      <th>Total Correctos</th>
+      <th>Total Incidencias</th>
+      <th>Total Alertas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transact of Transactions">
+      <td>{{ transact.transaccionesId }}</td>
+      <td>{{ transact.nombreArchivo }}</td>
+      <td>{{ transact.fechaCarga }}</td>
+      <td><a class="" [routerLink]="['/report-transaction', transact.transaccionesId]">{{transact.totalProcesados}}</a></td>
+      <td><a class="" [routerLink]="['/report-incidencias', transact.transaccionesId]">{{ transact.totalIncidencias }}</a></td>
+      <td><a class="" [routerLink]="['/report-alerts', transact.transaccionesId]">{{ transact.totalAlertas }}</a></td>
+    </tr>
+  </tbody>
+</table>

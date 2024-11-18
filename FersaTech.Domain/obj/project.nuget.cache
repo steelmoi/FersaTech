@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "7hApKf/HHViPlWCr33cGyn1KyvcI7mKgmmf9EoUzaSTk5zAMy7bCXEw4OLv+yU5++mxZHRMzgGuSllS9hhu40g==",
+  "success": true,
+  "projectFilePath": "C:\\Others\\azure\\FersaTech\\FersaTech.Domain\\FersaTech.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,17 @@
+C:\Others\azure\FersaTech\FersaTech.Services\bin\Debug\net6.0\FersaTech.Services.deps.json
+C:\Others\azure\FersaTech\FersaTech.Services\bin\Debug\net6.0\FersaTech.Services.runtimeconfig.json
+C:\Others\azure\FersaTech\FersaTech.Services\bin\Debug\net6.0\FersaTech.Services.dll
+C:\Others\azure\FersaTech\FersaTech.Services\bin\Debug\net6.0\FersaTech.Services.pdb
+C:\Others\azure\FersaTech\FersaTech.Services\bin\Debug\net6.0\FersaTech.Domain.dll
+C:\Others\azure\FersaTech\FersaTech.Services\bin\Debug\net6.0\FersaTech.Domain.pdb
+C:\Others\azure\FersaTech\FersaTech.Services\obj\Debug\net6.0\FersaTech.Services.csproj.AssemblyReference.cache
+C:\Others\azure\FersaTech\FersaTech.Services\obj\Debug\net6.0\FersaTech.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Others\azure\FersaTech\FersaTech.Services\obj\Debug\net6.0\FersaTech.Services.AssemblyInfoInputs.cache
+C:\Others\azure\FersaTech\FersaTech.Services\obj\Debug\net6.0\FersaTech.Services.AssemblyInfo.cs
+C:\Others\azure\FersaTech\FersaTech.Services\obj\Debug\net6.0\FersaTech.Services.csproj.CoreCompileInputs.cache
+C:\Others\azure\FersaTech\FersaTech.Services\obj\Debug\net6.0\FersaTec.C20470A9.Up2Date
+C:\Others\azure\FersaTech\FersaTech.Services\obj\Debug\net6.0\FersaTech.Services.dll
+C:\Others\azure\FersaTech\FersaTech.Services\obj\Debug\net6.0\refint\FersaTech.Services.dll
+C:\Others\azure\FersaTech\FersaTech.Services\obj\Debug\net6.0\FersaTech.Services.pdb
+C:\Others\azure\FersaTech\FersaTech.Services\obj\Debug\net6.0\FersaTech.Services.genruntimeconfig.cache
+C:\Others\azure\FersaTech\FersaTech.Services\obj\Debug\net6.0\ref\FersaTech.Services.dll

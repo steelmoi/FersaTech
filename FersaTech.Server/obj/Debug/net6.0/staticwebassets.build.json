@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "dn9x2N7em8geI61dbCzKptBu+P3elQ4VajtYV9qnp9g=",
+  "Source": "FersaTech.Server",
+  "BasePath": "_content/FersaTech.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Others\\azure\\FersaTech\\fersatech.client\\fersatech.client.esproj",
+      "Version": 2,
+      "Source": "fersatech.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

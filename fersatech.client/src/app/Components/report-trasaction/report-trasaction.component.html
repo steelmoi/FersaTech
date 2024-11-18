@@ -1,0 +1,36 @@
+<h1 id="tableLabel">Reporte de Transacciones</h1>
+<div class="d-flex justify-content-center" *ngIf="IsBusy">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Cargando...</span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <button type="button" class="btn btn-success btn-floating" routerLinkActive="active" (click)="Back()">
+      <i class="bi-arrow-left-circle">&nbsp;Regresar</i>
+    </button>
+  </div>
+</div>
+<table class="table table-responsive table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Archivo</th>
+      <th>Fecha Carga</th>
+      <th>Tipo</th>
+      <th>Monto</th>
+      <th>Línea</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let det of Details">
+      <td>{{ det.transaccionesDetalleId }}</td>
+      <td></td>
+      <td>{{ det.fecha }}</td>
+      <td>{{ det.tipo }}</td>
+      <td>{{ det.monto }}</td>
+      <td>{{ det.numLinea }}</td>
+    </tr>
+  </tbody>
+</table>
