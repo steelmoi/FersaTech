@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Alert } from '../../interfaces/alert';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AlertServiceService } from '../../services/RestFull/alert-service.service';
 
 @Component({
@@ -11,13 +11,17 @@ import { AlertServiceService } from '../../services/RestFull/alert-service.servi
 export class ReportAlertsComponent {
   public Alerts: Alert[] = []
   public IsBusy: boolean = false
+  private route = inject(ActivatedRoute);
 
   constructor(private serviceIncident: AlertServiceService,
     private router: Router
   ) { }
 
   ngOnInit() {
-    this.LoadData(1)
+    this.route.paramMap.subscribe((params) => {
+      let TransactionId: number = Number(params.get('id')) | 0;
+      this.LoadData(TransactionId)
+    });
   }
 
   Back() {

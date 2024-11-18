@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { Incident } from '../../interfaces/incident';
 import { IncidentServiceService } from '../../services/RestFull/incident-service.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-report-incidents',
@@ -11,13 +11,17 @@ import { Router } from '@angular/router';
 export class ReportIncidentsComponent implements OnInit {
   public Incidents: Incident[] = []
   public IsBusy: boolean = false
+  private route = inject(ActivatedRoute);
 
   constructor(private serviceIncident: IncidentServiceService,
               private router: Router
   ) { }
 
   ngOnInit() {
-    this.LoadData(1)
+    this.route.paramMap.subscribe((params) => {
+      let TransactionId: number = Number(params.get('id')) | 0;
+      this.LoadData(TransactionId)
+    });
   }
 
   Back() {
